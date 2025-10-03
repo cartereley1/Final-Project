@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eloheh - Project Hub</title>
   <style>
-    /* General body styling */
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -14,7 +13,6 @@
       color: #333;
     }
 
-    /* Header with hero image */
     header {
       background-color: #4a90e2;
       color: white;
@@ -30,7 +28,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(74,144,226,0.6); /* overlay */
+      background-color: rgba(74,144,226,0.6);
     }
     header h1 {
       position: relative;
@@ -38,7 +36,6 @@
       margin: 0;
     }
 
-    /* Navigation bar */
     nav {
       display: flex;
       justify-content: center;
@@ -57,33 +54,29 @@
       color: white;
     }
 
-    /* Main content */
     main {
       padding: 50px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
-    }
-    main h2 {
-      text-align: center;
-      color: #4a90e2;
-      margin-bottom: 40px;
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
     }
 
-    .project-links, .team-members {
+    .project-links {
+      flex: 1 1 300px;
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
-    /* Project links styling */
     .project-links a {
       padding: 20px;
-      text-align: center;
+      text-align: left;
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #333;
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -93,15 +86,19 @@
       background-color: #e1f0ff;
     }
 
-    /* Team section styling */
     .team-members {
-      margin-top: 50px;
-      text-align: center;
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
     }
     .team-member {
       background-color: white;
       padding: 20px;
       border-radius: 10px;
+      width: 100%;
+      text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .team-member h3 {
@@ -113,7 +110,6 @@
       color: #333;
     }
 
-    /* Footer */
     footer {
       background-color: #333;
       color: white;
@@ -122,13 +118,9 @@
       margin-top: 50px;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav a {
-        padding: 10px 12px;
+    @media (max-width: 800px) {
+      main {
+        flex-direction: column;
       }
     }
   </style>
@@ -148,8 +140,9 @@
 </nav>
 
 <main>
-  <h2>Explore Our Projects</h2>
+  <!-- Left column: links -->
   <div class="project-links">
+    <h2>Project Links</h2>
     <a href="https://cartereley1.github.io/Home-Story/">Home Story</a>
     <a href="https://constan055.github.io/Group-Project-MGMT/">Group Project MGMT</a>
     <a href="https://gavinm721.github.io/Products/#">Products</a>
@@ -157,8 +150,9 @@
     <a href="https://karleighshick.github.io/services-project/">Services Project</a>
   </div>
 
-  <h2>Meet the Team</h2>
+  <!-- Right column: team -->
   <div class="team-members">
+    <h2>Meet the Team</h2>
     <div class="team-member">
       <h3>Carter Eley</h3>
       <p>eleyc@purdue.edu</p>
@@ -174,6 +168,10 @@
     <div class="team-member">
       <h3>Karleigh Shick</h3>
       <p>kshick@purdue.edu</p>
+    </div>
+    <div class="team-member">
+      <h3>Gavin McMahon</h3>
+      <p>mcmahog@purdue.edu</p>
     </div>
   </div>
 </main>
