@@ -14,19 +14,31 @@
       color: #333;
     }
 
-    /* Header */
+    /* Header with hero image */
     header {
       background-color: #4a90e2;
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(74,144,226,0.6); /* overlay */
     }
     header h1 {
+      position: relative;
+      font-size: 3rem;
       margin: 0;
-      font-size: 2.5rem;
     }
 
-    /* Navigation links */
+    /* Navigation bar */
     nav {
       display: flex;
       justify-content: center;
@@ -48,10 +60,84 @@
     /* Main content */
     main {
       padding: 50px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     main h2 {
       text-align: center;
       color: #4a90e2;
       margin-bottom: 40px;
+    }
+    .project-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .project-links a {
+      padding: 20px;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: #333;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-links a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+      background-color: #e1f0ff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Eloheh Project Hub</h1>
+</header>
+
+<nav>
+  <a href="https://cartereley1.github.io/Home-Story/">Home Story</a>
+  <a href="https://constan055.github.io/Group-Project-MGMT/">Group Project MGMT</a>
+  <a href="https://gavinm721.github.io/Products/#">Products</a>
+  <a href="https://yousephali.github.io/customertestimonials/">Customer Testimonials</a>
+  <a href="https://karleighshick.github.io/services-project/">Services Project</a>
+</nav>
+
+<main>
+  <h2>Explore Our Projects</h2>
+  <div class="project-links">
+    <a href="https://cartereley1.github.io/Home-Story/">Home Story</a>
+    <a href="https://constan055.github.io/Group-Project-MGMT/">Group Project MGMT</a>
+    <a href="https://gavinm721.github.io/Products/#">Products</a>
+    <a href="https://yousephali.github.io/customertestimonials/">Customer Testimonials</a>
+    <a href="https://karleighshick.github.io/services-project/">Services Project</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Eloheh Team
+</footer>
+
+</body>
+</html>
